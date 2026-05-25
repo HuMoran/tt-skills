@@ -8,7 +8,8 @@ A curated set of broadly useful skills I extract from real engineering work and 
 
 | Name | Description |
 |---|---|
-| [`oscilloscope`](skills/oscilloscope/SKILL.md) | Drive Keysight DSO5000-series and RIGOL DS1000Z-series benchtop scopes over VISA / USBTMC. Auto-detects vendor by `*IDN?`; bundles a 800-line self-contained `scope.py` with screenshots, CSV capture, triggering, deep memory, mask test, FFT, USB pipe-stall recovery. |
+| [`oscilloscope`](skills/oscilloscope/SKILL.md) | Drive Keysight DSO5000-series and RIGOL DS1000Z-series benchtop scopes over VISA / USBTMC. Auto-detects vendor by `*IDN?`; bundles a self-contained `scope.py` with screenshots, CSV capture, triggering, deep memory, mask test, FFT, USB pipe-stall recovery. |
+| [`rs485-modbus`](skills/rs485-modbus/SKILL.md) | Drive a USB-to-RS485 dongle (FT232 / CH340 / CP210x) as a Modbus RTU master from the Mac. Pure pyserial + hand-rolled CRC — no `pymodbus`, no `mbpoll`. Two layers: generic (any port/slave/register) and project-preset (defaults baked in). |
 
 More to come.
 
@@ -31,6 +32,7 @@ git clone https://github.com/HuMoran/tt-skills.git ~/Claude/tt-skills
 
 # Expose each skill to Claude Code via symlink
 ln -s ~/Claude/tt-skills/skills/oscilloscope ~/.claude/skills/oscilloscope
+ln -s ~/Claude/tt-skills/skills/rs485-modbus ~/.claude/skills/rs485-modbus
 ```
 
 Changes to files in `~/Claude/tt-skills/` are picked up by Claude Code immediately — no plugin update needed.

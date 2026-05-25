@@ -1,7 +1,7 @@
 {
   "name": "tt-skills",
-  "description": "Personal Claude Code skill collection by HuMoran — currently: oscilloscope (Keysight DSO5000 + RIGOL DS1000Z)",
-  "version": "0.1.0",
+  "description": "Personal Claude Code skill collection by HuMoran — hardware bring-up helpers (oscilloscope SCPI driver, RS485 Modbus RTU master) and more",
+  "version": "0.2.0",
   "author": {
     "name": "HuMoran",
     "email": "htax2013@gmail.com"
@@ -13,11 +13,15 @@
     "scpi",
     "visa",
     "usbtmc",
+    "rs485",
+    "modbus",
+    "modbus-rtu",
     "hardware",
     "keysight",
     "rigol"
   ],
   "skills": [
-    "./skills/oscilloscope"
+    "./skills/oscilloscope",
+    "./skills/rs485-modbus"
   ]
 }

@@ -5,6 +5,16 @@ All notable changes to tt-skills.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-05-25
+
+### Added
+
+- `rs485-modbus` skill — drives a USB-to-RS485 dongle (FT232/CH340/CP210x) as a Modbus RTU master via pure `pyserial` + hand-rolled CRC. No `pymodbus`, no `mbpoll` dependency. Supports holding/input register reads, single + multi register writes (FC 03/04/06/10), CRC error and timeout diagnostics. Ships a self-contained `modbus.py` plus an `emst-core` preset for the project-specific bus.
+
+### Changed
+
+- Bump plugin description and keywords to reflect the multi-skill scope (hardware bring-up).
+
 ## [0.1.0] - 2026-05-25
 
 ### Added
