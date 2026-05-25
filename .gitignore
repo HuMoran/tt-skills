@@ -1,0 +1,19 @@
+# Python virtualenv — recreated locally by each skill's setup.sh
+.venv/
+__pycache__/
+*.pyc
+
+# Scope capture artifacts (image / waveform / monitor dumps)
+*.bmp
+*.png
+*.csv
+scope_*
+monitor_*/
+
+# macOS
+.DS_Store
+
+# Editor noise
+.idea/
+.vscode/
+*.swp

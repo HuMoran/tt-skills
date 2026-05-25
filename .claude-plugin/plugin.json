@@ -1,0 +1,23 @@
+{
+  "name": "tt-skills",
+  "description": "Personal Claude Code skill collection by HuMoran — currently: oscilloscope (Keysight DSO5000 + RIGOL DS1000Z)",
+  "version": "0.1.0",
+  "author": {
+    "name": "HuMoran",
+    "email": "htax2013@gmail.com"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/HuMoran/tt-skills",
+  "keywords": [
+    "oscilloscope",
+    "scpi",
+    "visa",
+    "usbtmc",
+    "hardware",
+    "keysight",
+    "rigol"
+  ],
+  "skills": [
+    "./skills/oscilloscope"
+  ]
+}

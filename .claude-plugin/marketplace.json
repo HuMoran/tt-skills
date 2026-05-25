@@ -1,0 +1,32 @@
+{
+  "name": "tt-skills",
+  "id": "tt-skills",
+  "owner": {
+    "name": "HuMoran"
+  },
+  "metadata": {
+    "description": "Personal Claude Code skill collection",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "tt-skills",
+      "source": "./",
+      "description": "Oscilloscope SCPI driver (Keysight + RIGOL) plus future general-purpose skills",
+      "version": "0.1.0",
+      "author": {
+        "name": "HuMoran",
+        "email": "htax2013@gmail.com"
+      },
+      "license": "MIT",
+      "homepage": "https://github.com/HuMoran/tt-skills",
+      "keywords": [
+        "oscilloscope",
+        "hardware",
+        "scpi",
+        "visa"
+      ],
+      "category": "hardware"
+    }
+  ]
+}
