@@ -10,6 +10,8 @@ A curated set of broadly useful skills I extract from real engineering work and 
 |---|---|
 | [`oscilloscope`](skills/oscilloscope/SKILL.md) | Drive Keysight DSO5000-series and RIGOL DS1000Z-series benchtop scopes over VISA / USBTMC. Auto-detects vendor by `*IDN?`; bundles a self-contained `scope.py` with screenshots, CSV capture, triggering, deep memory, mask test, FFT, USB pipe-stall recovery. |
 | [`rs485-modbus`](skills/rs485-modbus/SKILL.md) | Drive a USB-to-RS485 dongle (FT232 / CH340 / CP210x) as a Modbus RTU master from the Mac. Pure pyserial + hand-rolled CRC — no `pymodbus`, no `mbpoll`. Two layers: generic (any port/slave/register) and project-preset (defaults baked in). |
+| [`creo-jlink`](skills/creo-jlink/SKILL.md) | Run automation inside PTC Creo Parametric via J-Link (the Java API) — batch STEP/BOM/drawing export, mass properties. Ships a `creo-run.bat` launcher that verifies the JVM against `otk.jar`'s bytecode version (the mismatch that makes a J-Link app die silently), generates `config.pro`/`protk.dat`/message files, compiles and launches. Plus a `HelloJlink.java` smoke test and skeleton. |
+| [`creo-remote`](skills/creo-remote/SKILL.md) | Drive Creo on a remote Windows box from macOS/Linux over SSH: push the app, compile, launch into the interactive session via `schtasks /it`, poll for the done marker, free the license seat. Goes in through WSL + interop instead of PowerShell, so no `-EncodedCommand` and no codepage grief. |
 
 More to come.
 
@@ -33,6 +35,8 @@ git clone https://github.com/HuMoran/tt-skills.git ~/Claude/tt-skills
 # Expose each skill to Claude Code via symlink
 ln -s ~/Claude/tt-skills/skills/oscilloscope ~/.claude/skills/oscilloscope
 ln -s ~/Claude/tt-skills/skills/rs485-modbus ~/.claude/skills/rs485-modbus
+ln -s ~/Claude/tt-skills/skills/creo-jlink   ~/.claude/skills/creo-jlink
+ln -s ~/Claude/tt-skills/skills/creo-remote  ~/.claude/skills/creo-remote
 ```
 
 Changes to files in `~/Claude/tt-skills/` are picked up by Claude Code immediately — no plugin update needed.
