@@ -5,6 +5,16 @@ All notable changes to tt-skills.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-08-24
+
+### Added
+
+- `converting-easyeda-pro-to-kicad` skill — full pipeline for converting JLCEDA Pro (EasyEDA Pro) projects to KiCad 10, extracted from a real board conversion taken to zero ERC/DRC with a pad-by-pad netlist-equivalence proof. Documents the format internals (`.eprj2` is an encrypted SQLite history; `.epro` is the only KiCad-importable export; `_backup/*.epro2` holds a plaintext `.epru` JSONL for semantic diffs), the importer's defects and their fixes (symbols shifted off-grid breaking connectivity, all pins typed input/unspecified, `$1Nxxxx` vs `Net-(...)` naming, footprints never written to a library), the LCSC cloud 3D-shell endpoint chain (searchByCodes → components → modules bucket, with the standard-edition fallback), and an iteration-readiness section (grid snap traps like no_connect markers not moving with symbols, field-sync direction being the opposite of what parity reports suggest, empty footprint Value never matching, and zone refill requiring solid pad connections because EasyEDA's exported geometry is direct-connect regardless of its DIVERGENCE rule records). Ships `t1_compare.py` (netlist partition isomorphism check), `schtool.py`, `fetch.py` (3D shell downloader) and `normalize.py` (STEP normalization via KiCad's bundled python). Skill text in Chinese; guidance validated RED/GREEN with baseline and with-skill probes.
+
+### Changed
+
+- Plugin scope widened to "hardware, CAD and ECAD"; keywords gain easyeda/jlceda/kicad/ecad/pcb.
+
 ## [0.3.0] - 2026-08-18
 
 ### Added

@@ -6,14 +6,14 @@
   },
   "metadata": {
     "description": "Personal Claude Code skill collection",
-    "version": "0.3.0"
+    "version": "0.4.0"
   },
   "plugins": [
     {
       "name": "tt-skills",
       "source": "./",
-      "description": "Hardware and CAD bring-up helpers: oscilloscope SCPI driver (Keysight + RIGOL), RS485 Modbus RTU master, PTC Creo J-Link automation (local + remote over SSH), more to come",
-      "version": "0.3.0",
+      "description": "Hardware, CAD and ECAD helpers: oscilloscope SCPI driver (Keysight + RIGOL), RS485 Modbus RTU master, PTC Creo J-Link automation (local + remote over SSH), EasyEDA Pro (JLCEDA) → KiCad 10 project conversion, more to come",
+      "version": "0.4.0",
       "author": {
         "name": "HuMoran",
         "email": "htax2013@gmail.com"
@@ -32,7 +32,10 @@
         "cad",
         "ptc",
         "ssh",
-        "wsl"
+        "wsl",
+        "easyeda",
+        "kicad",
+        "ecad"
       ],
       "category": "hardware"
     }

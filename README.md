@@ -12,6 +12,7 @@ A curated set of broadly useful skills I extract from real engineering work and 
 | [`rs485-modbus`](skills/rs485-modbus/SKILL.md) | Drive a USB-to-RS485 dongle (FT232 / CH340 / CP210x) as a Modbus RTU master from the Mac. Pure pyserial + hand-rolled CRC — no `pymodbus`, no `mbpoll`. Two layers: generic (any port/slave/register) and project-preset (defaults baked in). |
 | [`creo-jlink`](skills/creo-jlink/SKILL.md) | Run automation inside PTC Creo Parametric via J-Link (the Java API) — batch STEP/BOM/drawing export, mass properties. Ships a `creo-run.bat` launcher that verifies the JVM against `otk.jar`'s bytecode version (the mismatch that makes a J-Link app die silently), generates `config.pro`/`protk.dat`/message files, compiles and launches. Plus a `HelloJlink.java` smoke test and skeleton. |
 | [`creo-remote`](skills/creo-remote/SKILL.md) | Drive Creo on a remote Windows box from macOS/Linux over SSH: push the app, compile, launch into the interactive session via `schtasks /it`, poll for the done marker, free the license seat. Goes in through WSL + interop instead of PowerShell, so no `-EncodedCommand` and no codepage grief. |
+| [`converting-easyeda-pro-to-kicad`](skills/converting-easyeda-pro-to-kicad/SKILL.md) | Convert JLCEDA Pro / EasyEDA Pro projects (`.eprj2`/`.epro`/`.epro2`) to KiCad 10 and take them to zero ERC/DRC with a netlist-equivalence proof. Covers format internals (encrypted `.eprj2`, plaintext `.epru` backups), importer defect fixes (broken connectivity, pin types, `$1Nxxxx` net naming), the LCSC cloud 3D-shell fetch chain, and making the import iteration-ready (grid snap, field sync direction, zone refill with solid pad connections). Ships a netlist partition comparator plus 3D fetch/normalize scripts. Skill text in Chinese. |
 
 More to come.
 
@@ -37,6 +38,7 @@ ln -s ~/Claude/tt-skills/skills/oscilloscope ~/.claude/skills/oscilloscope
 ln -s ~/Claude/tt-skills/skills/rs485-modbus ~/.claude/skills/rs485-modbus
 ln -s ~/Claude/tt-skills/skills/creo-jlink   ~/.claude/skills/creo-jlink
 ln -s ~/Claude/tt-skills/skills/creo-remote  ~/.claude/skills/creo-remote
+ln -s ~/Claude/tt-skills/skills/converting-easyeda-pro-to-kicad ~/.claude/skills/converting-easyeda-pro-to-kicad
 ```
 
 Changes to files in `~/Claude/tt-skills/` are picked up by Claude Code immediately — no plugin update needed.

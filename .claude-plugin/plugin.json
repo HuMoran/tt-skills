@@ -1,7 +1,7 @@
 {
   "name": "tt-skills",
-  "description": "Personal Claude Code skill collection by HuMoran — hardware and CAD bring-up helpers (oscilloscope SCPI driver, RS485 Modbus RTU master, Creo J-Link automation) and more",
-  "version": "0.3.0",
+  "description": "Personal Claude Code skill collection by HuMoran — hardware, CAD and ECAD helpers (oscilloscope SCPI driver, RS485 Modbus RTU master, Creo J-Link automation, EasyEDA Pro → KiCad conversion) and more",
+  "version": "0.4.0",
   "author": {
     "name": "HuMoran",
     "email": "htax2013@gmail.com"
@@ -27,12 +27,18 @@
     "java",
     "ssh",
     "wsl",
-    "remote"
+    "remote",
+    "easyeda",
+    "jlceda",
+    "kicad",
+    "ecad",
+    "pcb"
   ],
   "skills": [
     "./skills/oscilloscope",
     "./skills/rs485-modbus",
     "./skills/creo-jlink",
-    "./skills/creo-remote"
+    "./skills/creo-remote",
+    "./skills/converting-easyeda-pro-to-kicad"
   ]
 }
